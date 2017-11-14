@@ -1,0 +1,39 @@
+
+<div class="typo typo-selection">
+    <div class="row">
+        <div class="col-xs-12 col-md-offset-2 col-md-8">
+            <article class="article">
+                <div class="article-header">
+                    <h1 class="header-title">Title</h1>
+                    <div class="header-dateline">
+                         <!-- <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time> -->
+                          <time >date:2017-11-14</time>
+                    </div>
+                </div>
+                <div class="article-body">
+                    测试：
+                    <code><pre>cout << "小T啊，你可长点儿心吧！！" << endl;</pre></code>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-offset-2 col-md-4">
+            <div class="pagination">
+            {% if page.next %}
+            <span class="pagination-label">Newer Post</span>
+            <a href="{{ page.next.url }}" rel="next"><span>{{ page.next.title }}</span></a>
+            {% endif %}
+            </div>
+        </div>
+
+        <div class="col-xs-12  col-md-4">
+            <div class="pagination pull-right">
+            {% if page.previous %}
+            <span class="prev-label">Older Post</span>
+            <a href="{{ page.previous.url }}" rel="prev"><span>{{ page.previous.title }}</span></a>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,4 +7,4 @@ from django.http import HttpResponse
 
 
 def ShowIndex(request):
-    return HttpResponse(u'欢迎访问WebSec! ')
+    return render(request, "HomePage.html")
