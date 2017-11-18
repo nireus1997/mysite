@@ -198,10 +198,10 @@ article * {
 }
 
 .article-list-head {
-  margin:0 0 10px 0;
+  margin:0 0 1px 0;
   font-weight: 700;
   font-size: 1.07692em;
-  line-height: 1.71429;
+  line-height: 2.71429;
   color: #666666;
   text-transform: uppercase;
   border-bottom: 1px solid #dfdfdf
