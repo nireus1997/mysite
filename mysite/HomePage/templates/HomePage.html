@@ -17,11 +17,12 @@
       <link rel="icon" href="static/images/favicon.ico">
    </head>
    <body>
-      <div class="container">
+      <div id="content-wrapper">
         {% include 'nav.html' %}
         {% include 'main.html' %}
-        {% include 'foot.html' %}
+        <div class="push-footer"></div>
       </div>
+      {% include 'foot.html' %}
       <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </body>
