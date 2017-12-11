@@ -1,0 +1,46 @@
+<div class="main-page-container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="search-form">
+              <input class="form-control" placeholder="小T是二货" type="text">
+              <a href="www.baidu.com"><span class="btn-search fa fa-search fa-lg"></span></a>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <div class="div-article-list">
+              <h4 class="article-list-head">目录</h4>
+              <ul>
+                {% for category in Categorys %}
+                <li>
+                  <a class="article-list-classify" href="{% url 'Show_WebSecPage_by_Cat' %}{{category.2}} "><i class="fa fa-plus"></i>&nbsp;{{ category.0 }}</a>
+                  <span class="article-list-count">{{ category.1 }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row" style="border-left:1px solid #ececec;">
+        <div class="col-xs-12 col-md-offset-2 col-md-8">
+          <article class="article">
+            <div class="article-header">
+              <h1 class="header-title">{{ article.0.title }}</h1>
+              <div class="header-dateline">
+                 <time>{{ article.0.created|date:"Y-m-d H:i" }}</time>
+              </div>
+            </div>
+            <div class="article-body">
+                <p>{{ article.0.content }}</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>

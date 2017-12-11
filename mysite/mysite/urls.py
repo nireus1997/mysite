@@ -16,8 +16,25 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from HomePage import views as HomePageView
+# from blog import views as MainView
+from blog import WebSecView
+from blog import HomeView, FuzzView, BlogView, NewsView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',HomePageView.ShowIndex)
+    # url(r'^$',HomePageView.ShowIndex),
+
+    # websec page
+    url(r'^$',WebSecView.ShowMainPage, name="ShowMainPage"),
+
+    url(r'^websec/$',WebSecView.Show_WebSecPage_by_Cat, name="Show_WebSecPage_by_Cat"),
+    url(r'^websec/([0-9]+)/$',WebSecView.Show_WebSecPage_blog_detail, name="Show_WebSecPage_blog_detail"),
+
+    url(r'^home/$', HomeView.ShowAbout, name="Show_About"),
+
+    url(r'^fuzz/$', FuzzView.ShowAbout, name="Show_About"),
+
+    url(r'^blog/$', BlogView.ShowAbout, name="Show_About"),
+
+    url(r'^news/$', NewsView.ShowAbout, name="Show_About"),
 ]
